@@ -60,3 +60,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## How to pull?
+
+1. Clone project "git clone (link of your project)".
+2. type "Composer install" on terminal.
+3. if you have windows type this on terminal "copy .env.example .env" if linux "cp .env.example .env".
+4. then type on terminal "php artisan key:generate".
+5. just if you need type on terminal "php artisan migrate" to migrate a test database.
+6. then type on terminal "php artisan serve" to run the web application.
