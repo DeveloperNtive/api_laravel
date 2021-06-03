@@ -14,7 +14,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        //Metodo para mostrar informacion sobre el cliente
+        //Muestra todos los clientes
         return Cliente::all();
     }
 
@@ -26,7 +26,7 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //Metodo para crear un nuevo cliente
+        //Crea un nuevo cliente
         Cliente::create($request->all());
         return response()->json([
             'res' => true,
@@ -42,7 +42,7 @@ class ClienteController extends Controller
      */
     public function show(Cliente $cliente)
     {
-        //
+        //Muestra un cliente especifico
         return response()->json([
             'res'=>'ok',
             'Cliente'=>$cliente
@@ -58,7 +58,7 @@ class ClienteController extends Controller
      */
     public function update(Request $request, Cliente $cliente)
     {
-        //
+        //Actualiza un cliente especifico
         $cliente->update($request->all());
         return response()->json([
             'res'=>'Ok',
@@ -74,7 +74,7 @@ class ClienteController extends Controller
      */
     public function destroy(Cliente $cliente)
     {
-        //
+        //Elimina un cliente especifico
         $cliente->delete();
         return response()->json([
             'res'=>'Ok',

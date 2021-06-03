@@ -32,6 +32,8 @@ Route::post('clientes', [ClienteController::class, 'store']);
 Route::post('productos', [ProductoController::class, 'store']);
 Route::post('marcas', [MarcasController::class, 'store']);
 Route::post('tipos', [TiposController::class, 'store']);
+
+// Tratar de no modificar esta parte por aqui.
 Route::post('venta', [VentasController::class, 'store']);
 
 //Mostrar informacion especifica
@@ -46,11 +48,13 @@ Route::put('clientes/{cliente}', [ClienteController::class, 'update']);
 Route::put('productos/{producto}', [ProductoController::class, 'update']);
 Route::put('marcas/{marca}', [MarcasController::class, 'update']);
 Route::put('tipos/{tipo}', [TiposController::class, 'update']);
+
+// Tratar de actualizar las ventas no desde routes si no desde la clase directamente.
 Route::put('venta/{venta}', [VentasController::class, 'update']);
 
-//Actualizar informacion especifica
+//Eliminar informacion especifica
 Route::delete('clientes/{cliente}', [ClienteController::class, 'destroy']);
 Route::delete('productos/{producto}', [ProductoController::class, 'destroy']);
 Route::delete('marcas/{marca}', [MarcasController::class, 'destroy']);
 Route::delete('tipos/{tipo}', [TiposController::class, 'destroy']);
-Route::delete('venta/{venta}', [VentasController::class, 'destroy']);
+// Route::delete('venta/{venta}', [VentasController::class, 'destroy']);
